@@ -9,16 +9,13 @@ export const Navbar = () => {
 
   return (
     <div  className='p-4 flex items-center justify-between '>
-        <Link href="/" >poster</Link>
-        {!user ?  <Link href="/auth" className='bg-[#181818] text-[#fff]  px-5 rounded-md py-1.5'>Join New</Link>
-          :  
-          <div className='flex items-center justify-center' >
-            <Link href="/post" className='text-[#1e9bf0] mr-4 border-r-[1px] flex items-center px-5  py-1.5'> <BiMessageSquareAdd className='mr-2' size={22}></BiMessageSquareAdd><span>Add Post</span></Link>
-            <Link href="/dashbord" className=''><img className='rounded-full ' src={user.photoURL} alt="" srcset=""  width={40}/> </Link>
-          </div>
+       {user &&  <Link href="/dashbord" className=''><img className='rounded-full ' src={user.photoURL} alt="" srcset=""  width={32}/> </Link>}
+
+        <Link href="/" className='text-xl font-bold' >posts</Link>
+        {!user ?  <Link href="/auth" className='bg-[#181818] text-[#fff] text-sm  px-4 rounded-[4px] py-[4px]'>Join New</Link>
+          :  <Link href="/post" className='text-[#1e9bf0] flex items-center   py-1.5'> <BiMessageSquareAdd className='' size={22}></BiMessageSquareAdd></Link>
       }
-       
-       
+  
     </div>
   )
 }

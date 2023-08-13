@@ -24,7 +24,7 @@ export default function Page() {
   },[user])
 
   return (
-    <div className='shadow-xl rounded-xl mt-10 text-[#212121] max-w-[400px] r p-10 mx-auto'>
+    <div className=' rounded-md mt-10 text-[#212121] max-w-[400px] r p-10 mx-auto'>
       <h1 className='text-2xl font-medium'>Join Today</h1>
       <div className='py-4'>
         <h3 className='py-4'>Sign in with one of the providers</h3>

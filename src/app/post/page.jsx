@@ -49,7 +49,7 @@ export default function page(){
         return;
     }
   return (
-    <div className='my-20 p-5 shadow-lg rounded-md max-w-md mx-auto'>
+    <div className='my-20 p-5  rounded-md max-w-md mx-auto'>
         <form onSubmit={submitPost} action="">
             <h1 className='text-2xl font-bold '>Create a new Post</h1>
             <div className='py-2'>

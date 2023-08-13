@@ -26,7 +26,7 @@ export default function Home() {
 
 
   return (
-    <main className= " md:max-w-[500px]   mx-auto ">
+    <main className= " md:max-w-[500px] mt-5  mx-auto ">
       {allPost.map(post => (
          <Message {...post}></Message>
       ))}
