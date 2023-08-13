@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { addDoc, collection, serverTimestamp } from '@firebase/firestore';
 import {toast} from "react-toastify"
 
-export default function page(){
+export default function Page(){
     const [post,setPost] = useState({description: ""});
     const routes = useRouter()
     //SubmitPost 
