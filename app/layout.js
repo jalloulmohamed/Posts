@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
       </Head>
-      <body className='bg-[#fff] h-[100vh] overflow-auto max-w-[500px] m-auto'>
+      <body className='bg-[#fff] min-h-[100vh] max-w-[500px] m-auto'>
         <ToastContainer></ToastContainer>
         <Navbar></Navbar>
         {children}

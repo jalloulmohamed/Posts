@@ -8,16 +8,20 @@ import {useAuthState} from 'react-firebase-hooks/auth/'
 export default function Page() {
   const [user, loading] = useAuthState(auth);
   const router = useRouter();
+  const signout=async ()=>{
+    auth.signOut()
+    router.push("/auth")
+  }
 
   useEffect(() =>  {
     if(loading) return;
     if(!user) return router.push("/auth")
   },[user,loading])
   return (
-    <div className=''>
+    <div className='p-2 min-h-[100vh]'>
         <h1>Yours posts</h1>
         <div>posts</div>
-        <button className='flex items-center mt-2 text-red-500'  onClick={() => auth.signOut()}> <PiSignOutFill className='mr-2' size={22}></PiSignOutFill> <span>Sign out</span></button>
+        <button className='flex mx-auto  items-center mt-2 text-red-500'  onClick={signout}> <PiSignOutFill className='mr-2' size={22}></PiSignOutFill> <span>Sign out</span></button>
     </div>
   )
 }

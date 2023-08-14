@@ -12,7 +12,7 @@ export const Navbar = () => {
        {user &&  <Link href="/dashbord" className=''><img className='rounded-full ' src={user.photoURL} alt="" srcset=""  width={32}/> </Link>}
 
         <Link href="/" className='text-xl font-bold' >posts</Link>
-        {!user ?  <Link href="/auth" className='bg-[#181818] text-[#fff] text-sm  px-4 rounded-[4px] py-[4px]'>Join New</Link>
+        {!user ?  <Link href="/auth" className='bg-[#181818] text-[#fff] text-sm  px-4 rounded-[4px] py-[5px]'>Join New</Link>
           :  <Link href="/post" className='text-[#1e9bf0] flex items-center   py-1.5'> <BiMessageSquareAdd className='' size={22}></BiMessageSquareAdd></Link>
       }
   
